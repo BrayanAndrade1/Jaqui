@@ -1,0 +1,40 @@
+body{
+	margin: 90px; padding: 550px; min-height: 150vh; display: flex; align-items: justify; justify-content: center;
+    background: #0270ff8a; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 196, 0, 0)), 
+    url('Jaqueline.jpg');
+}
+.heart{
+    height: 500px; width: 500px; background-color: red; position: absolute; transform: rotate(45deg); 
+    box-shadow: -20px 20px 150px red; 
+    animation: palpitar 0.5s linear infinite alternate;
+}
+.contenido{
+    position: absolute; text-align: center;
+}
+#cesped{
+	width: 2500px; bottom: 0px; position: fixed; margin: 0px;
+}
+.manga{
+	background: #00fa3a; transform:rotate(45deg); -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg);
+	-ms-transform:rotate(45deg); -o-transform:rotate(45deg); width: 100px; height: 100px; display: inline-block;
+}
+.fondo_manga{
+  background: #00ff3c; height: 60px; position: absolute; top: 50px; width: 4000px;
+}
+h1{
+    color: white;
+}
+@keyframes palpitar{
+    0%{transform: rotate(45deg) scale(1.10);}
+    80%{transform: rotate(45deg) scale(1.0);}
+    100%{transform: rotate(45deg) scale(0.8);}
+}
+.heart::before{
+    content: ""; position: absolute; height: 500px; width: 500px; background: red; right: 50%; 
+    border-radius: 50%; box-shadow: 20px 20px 150px red;
+}
+.heart::after{
+    content: ""; position: absolute; height: 500px; width: 500px; background: red; top: -50%;
+    border-radius: 50%; box-shadow: 20px 20px 150px red;
+}
